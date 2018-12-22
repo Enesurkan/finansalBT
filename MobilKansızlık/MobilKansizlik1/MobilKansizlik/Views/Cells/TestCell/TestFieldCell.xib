@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Deneme" id="KGk-i7-Jjw" customClass="TestFieldCell" customModule="MobilKansizlik" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="dszxfcghvjbk" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Lhb-LW-D0z">
+                        <rect key="frame" x="10" y="10" width="300" height="23.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEa-Ys-pFn">
+                        <rect key="frame" x="15" y="7" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="PpR-Pa-4iO"/>
+                            <constraint firstAttribute="height" constant="30" id="s0k-22-f3k"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="question-mark"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Lhb-LW-D0z" secondAttribute="bottom" constant="10" id="3c4-4M-9Od"/>
+                    <constraint firstItem="TEa-Ys-pFn" firstAttribute="centerY" secondItem="Lhb-LW-D0z" secondAttribute="centerY" id="LQo-X9-BjA"/>
+                    <constraint firstItem="Lhb-LW-D0z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Pbw-qh-7wO"/>
+                    <constraint firstItem="Lhb-LW-D0z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="afS-vx-j26"/>
+                    <constraint firstItem="TEa-Ys-pFn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rDE-Sh-Oyr"/>
+                    <constraint firstAttribute="trailing" secondItem="Lhb-LW-D0z" secondAttribute="trailing" constant="10" id="vEs-h9-gUQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="customDescView" destination="TEa-Ys-pFn" id="kMm-x7-Cus"/>
+                <outlet property="textField" destination="Lhb-LW-D0z" id="6m0-gQ-MpN"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="question-mark" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
+</document>

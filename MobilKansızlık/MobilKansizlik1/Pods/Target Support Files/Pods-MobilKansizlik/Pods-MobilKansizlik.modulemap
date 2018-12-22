@@ -1,0 +1,6 @@
+framework module Pods_MobilKansizlik {
+  umbrella header "Pods-MobilKansizlik-umbrella.h"
+
+  export *
+  module * { export * }
+}

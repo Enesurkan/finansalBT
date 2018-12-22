@@ -1,0 +1,52 @@
+PODS:
+  - AKSideMenu (1.4.0)
+  - Alamofire (4.8.0)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - FSPagerView (0.7.1)
+  - IQKeyboardManagerSwift (5.0.4)
+  - ObjectMapper (3.4.1)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
+  - SwiftyJSON (4.2.0)
+  - UICircularProgressRing (4.1.0)
+
+DEPENDENCIES:
+  - AKSideMenu
+  - Alamofire
+  - AlamofireObjectMapper
+  - FSPagerView
+  - IQKeyboardManagerSwift
+  - ObjectMapper
+  - SDWebImage (~> 4.0)
+  - SwiftyJSON
+  - UICircularProgressRing
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AKSideMenu
+    - Alamofire
+    - AlamofireObjectMapper
+    - FSPagerView
+    - IQKeyboardManagerSwift
+    - ObjectMapper
+    - SDWebImage
+    - SwiftyJSON
+    - UICircularProgressRing
+
+SPEC CHECKSUMS:
+  AKSideMenu: c2f5b367529450e95e9fa3f000671cb2a14daf17
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
+  IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
+  ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  UICircularProgressRing: 5a32c01f54474571b1e66e8fa050c0f83d6d981b
+
+PODFILE CHECKSUM: a2236b69dcf6416e63e77fa3a9d9bbf351ad5028
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yY1-6y-oCv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reusable TextVC-->
+        <scene sceneID="fKC-Pk-of0">
+            <objects>
+                <viewController storyboardIdentifier="ReusableTextVCID" id="yY1-6y-oCv" customClass="ReusableTextVC" customModule="MobilKansizlik" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q7x-Ez-TPu"/>
+                        <viewControllerLayoutGuide type="bottom" id="OcC-iz-g9L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oq0-is-dDx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pT7-dY-Jrs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47F-4C-KH7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-TH-mi8" customClass="ReusableTextView" customModule="MobilKansizlik" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="133.5" width="375" height="533.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="gtC-TH-mi8" firstAttribute="height" secondItem="47F-4C-KH7" secondAttribute="height" multiplier="0.8" id="1wq-eP-MaP"/>
+                                            <constraint firstAttribute="bottom" secondItem="gtC-TH-mi8" secondAttribute="bottom" id="9SS-Ez-sFw"/>
+                                            <constraint firstItem="gtC-TH-mi8" firstAttribute="leading" secondItem="47F-4C-KH7" secondAttribute="leading" id="MVj-fw-Obb"/>
+                                            <constraint firstAttribute="trailing" secondItem="gtC-TH-mi8" secondAttribute="trailing" id="cen-8c-0uD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="47F-4C-KH7" secondAttribute="trailing" id="FcQ-JS-pnj"/>
+                                    <constraint firstItem="47F-4C-KH7" firstAttribute="height" secondItem="pT7-dY-Jrs" secondAttribute="height" priority="250" id="akx-rb-I03"/>
+                                    <constraint firstItem="47F-4C-KH7" firstAttribute="width" secondItem="pT7-dY-Jrs" secondAttribute="width" id="c2R-bk-Mc4"/>
+                                    <constraint firstItem="47F-4C-KH7" firstAttribute="leading" secondItem="pT7-dY-Jrs" secondAttribute="leading" id="eun-Wp-FZD"/>
+                                    <constraint firstItem="47F-4C-KH7" firstAttribute="top" secondItem="pT7-dY-Jrs" secondAttribute="top" id="lD3-u5-J8Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="47F-4C-KH7" secondAttribute="bottom" id="qic-Fa-47a"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pT7-dY-Jrs" firstAttribute="leading" secondItem="Oq0-is-dDx" secondAttribute="leading" id="F8b-e5-9NE"/>
+                            <constraint firstAttribute="trailing" secondItem="pT7-dY-Jrs" secondAttribute="trailing" id="LK3-Yf-5G1"/>
+                            <constraint firstItem="OcC-iz-g9L" firstAttribute="top" secondItem="pT7-dY-Jrs" secondAttribute="bottom" id="OGL-T4-Q0i"/>
+                            <constraint firstItem="pT7-dY-Jrs" firstAttribute="top" secondItem="Oq0-is-dDx" secondAttribute="top" id="OTx-f0-8ry"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="47F-4C-KH7" id="3qY-Oh-gtB"/>
+                        <outlet property="reusableHeight" destination="1wq-eP-MaP" id="ieN-GE-6MM"/>
+                        <outlet property="reusableScrollView" destination="pT7-dY-Jrs" id="s2O-oy-Swq"/>
+                        <outlet property="reusableView" destination="gtC-TH-mi8" id="taV-uO-qMY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omH-AJ-XFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5087" y="-516"/>
+        </scene>
+    </scenes>
+</document>
