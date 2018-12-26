@@ -31,12 +31,15 @@ extension UITextField{
                 textField.layer.borderWidth = 1
                 textField.layer.borderColor = UIColor.red.cgColor
             }else{
+                if(textField.text!.count == 1){
+                    if case "." = textField.text?.first! {
+                        textField.layer.borderWidth = 1
+                        textField.layer.borderColor = UIColor.red.cgColor
+                    }
+                }
                 let character = textField.text?.last!
                 let str = String(character!)
-                if(str == "."){
-                    textField.layer.borderWidth = 1
-                    textField.layer.borderColor = UIColor.red.cgColor
-                }else{
+                if(str != "."){
                     textField.layer.borderColor = UIColor.lightGray.cgColor
                 }
                 

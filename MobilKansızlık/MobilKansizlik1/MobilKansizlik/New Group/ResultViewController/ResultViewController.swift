@@ -20,9 +20,6 @@ class ResultViewController: BaseViewController {
     }
     @IBOutlet weak var circleView: UICircularProgressRing!
     var cirleViewValue : CGFloat!
-    var tooPatient : CGFloat! = 75
-    var patient : CGFloat! = 50
-    var lowPatient : CGFloat! = 25
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -32,30 +29,19 @@ class ResultViewController: BaseViewController {
         super.viewDidAppear(animated)
         circleView.startProgress(to: cirleViewValue, duration: 2.0) {
         }
+        
     }
 }
 
 extension ResultViewController{
     
     func updateUI(){
+        let intValue = Int(cirleViewValue)
         self.backButton.backgroundColor = UIColor.kshadowBlack
         self.backButton.backgroundColor = UIColor.kturkuaz
         self.backButton.layer.addRadius(radius: 20)
         self.backButton.layer.addShadow(color: UIColor.kturkuaz, shadowRadius: 4)
-        
-//        let x = CGFloat(string: (self.testResponseModel.testValue ?? nil) ?? "")
-//        self.cirleViewValue = x
-        if(cirleViewValue > tooPatient){
-            self.textView.text = "1. derece hastalık belirtisi"
-        }else if((cirleViewValue < tooPatient) && (patient < cirleViewValue)){
-            self.textView.text = "2. derece hastalık belirtisi"
-        }else if((cirleViewValue < patient) && (cirleViewValue > lowPatient)){
-            self.textView.text = "3. derece hastalık belirtisi"
-        }else{
-            self.textView.text = "Hastalık belirtisine rastlanmamıştır."
-        }
-        
-        
+        self.textView.text = "%\(intValue) ihtimal ile hastasınız. Lütfen bir uzman hakime görününüz. İyi günler dileriz."
     }
     
     

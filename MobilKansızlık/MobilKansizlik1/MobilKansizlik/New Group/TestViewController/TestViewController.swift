@@ -25,6 +25,8 @@ class TestViewController: BaseViewController {
     var descView = DescCustomPopUpView()
     var model = UserTest()
     var buttonClicked = false
+    var valide = false
+    var resultValide = false
     override func viewDidLoad() {
         super.viewDidLoad()
         addNavigationBarItem()
@@ -126,72 +128,44 @@ extension TestViewController{
     }
     
     func valueAlgorithm(_ userTestModel: UserTest) -> CGFloat{
-        
-        var min : Double
-        var max : Double
-        var totalValue : CGFloat = 100
-        min = 3
-        max = 12
-        if((Double(model.WBC)! > min) && (Double(model.WBC)! < max)){
-            totalValue -= 8
+        if(Double(model.HGB)! < 10.95){
+            return 100
+        }else if(Double(model.HCT)! > 33.95){
+            if(Double(model.HGB)! < 11.35){
+                if(Double(model.MCH)! < 29.95){
+                    if(Double(model.MCV)! < 67.26){
+                        if(Double(model.HGB)! > 11.35){
+                            return 100
+                        }else{
+                            return 20
+                        }
+                    }else{
+                        if(Double(model.HGB)! > 11.35){
+                            return 10
+                        }else{
+                            if(Double(model.HCT)! < 34.85){
+                                return 30
+                            }else{
+                                if(Double(model.HCT)! < 34.95){
+                                    return 100
+                                }else{
+                                    return 10
+                                }
+                            }
+                        }
+                    }
+                }else{
+                    if(Double(model.RBC)! < 29.95){
+                        if(Double(model.RBC)! < 3.65){
+                            return 10
+                        }else{
+                            return 100
+                        }
+                    }
+                }
+            }
         }
-        min = 35
-        max = 80
-        if((Double(model.NE)! > min) && (Double(model.NE)! < max)){
-            totalValue -= 8
-        }
-        min = 3.2
-        max = 6
-        if((Double(model.RBC)! > min) && (Double(model.RBC)! < max)){
-            totalValue -= 8
-        }
-        min = 10
-        max = 18
-        if((Double(model.HGB)! > min) && (Double(model.HGB)! < max)){
-            totalValue -= 8
-        }
-        min = 30
-        max = 55
-        if((Double(model.HCT)! > min) && (Double(model.HCT)! < max)){
-            totalValue -= 8
-        }
-        min = 30
-        max = 36
-        if((Double(model.MCHC)! > min) && (Double(model.MCHC)! < max)){
-            totalValue -= 8
-        }
-        min = 25
-        max = 33
-        if((Double(model.MCH)! > min) && (Double(model.MCH)! < max)){
-            totalValue -= 8
-        }
-        min = 78
-        max = 105
-        if((Double(model.MCV)! > min) && (Double(model.MCV)! < max)){
-            totalValue -= 8
-        }
-        min = 15
-        max = 50
-        if((Double(model.LYM)! > min) && (Double(model.LYM)! < max)){
-            totalValue -= 8
-        }
-        min = 9
-        max = 18
-        if((Double(model.RDW)! > min) && (Double(model.RDW)! < max)){
-            totalValue -= 8
-        }
-        min = 150
-        max = 500
-        if((Double(model.PLT)! > min) && (Double(model.PLT)! < max)){
-            totalValue -= 8
-        }
-        min = 0
-        max = 15
-        if((Double(model.MPV)! > min) && (Double(model.MPV)! < max)){
-            totalValue -= 8
-        }
-        
-        return totalValue
+        return 10
     }
     
     @objc func showDescView(_ sender : UIButton){
@@ -276,7 +250,7 @@ extension TestViewController : UITextFieldDelegate{
             if(textField.testFieldKeyboardValide(textField)){
                 model.WBC = textField.text!
             }else{
-               textField.text = model.WBC
+                textField.text = model.WBC
             }
             textField.validTest(textField, type: .testValue)
             break
@@ -386,14 +360,14 @@ extension TestViewController : UITextFieldDelegate{
             isValieValue = false
             if let cell = self.tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TestFieldCell{
                 cell.textField.validTest(cell.textField, type: .testValue)
-
+                
             }
         }
         if(model.RBC.isEmpty){
             isValieValue = false
             if let cell = self.tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? TestFieldCell{
                 cell.textField.validTest(cell.textField, type: .testValue)
-
+                
             }
         }
         if(model.HGB.isEmpty){

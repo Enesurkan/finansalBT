@@ -46,6 +46,7 @@ extension ReusableTextView{
         self.separatorView.layer.addRadius(radius: 4)
         self.descLabel.textColor = UIColor.kDescLabel
         
+        
     }
     
 }
