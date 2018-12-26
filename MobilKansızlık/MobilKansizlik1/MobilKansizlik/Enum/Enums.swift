@@ -10,18 +10,12 @@ import Foundation
 
 enum TestTextField : Int{
     
-    case WBC = 0
-    case NE = 1
-    case RBC = 2
-    case HGB = 3
-    case HCT = 4
-    case MCHC = 5
-    case MCH = 6
-    case MCV = 7
-    case LYM = 8
-    case RDW = 9
-    case PLT = 10
-    case MPV = 11
+   
+    case HGB = 0
+    case HCT = 1
+    case MCH = 2
+    case MCV = 3
+    case RBC = 4
     
 }
 

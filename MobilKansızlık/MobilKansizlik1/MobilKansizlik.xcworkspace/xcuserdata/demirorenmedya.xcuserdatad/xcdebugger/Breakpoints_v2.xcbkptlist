@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MobilKansizlik/New Group/TestViewController/TestViewController.swift"
+            timestampString = "567551663.156379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
+            landmarkName = "textFieldDidChange(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobilKansizlik.TestViewController.textFieldDidChange(__C.UITextField) -&gt; ()"
+                  moduleName = "MobilKansizlik"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/demirorenmedya/Desktop/MobilKans%C4%B1zl%C4%B1k/MobilKansizlik1/MobilKansizlik/New%20Group/TestViewController/TestViewController.swift"
+                  timestampString = "567551571.990679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "248"
+                  endingLineNumber = "248"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobilKansizlik.TestViewController.textFieldDidChange(__C.UITextField) -&gt; ()"
+                  moduleName = "MobilKansizlik"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/demirorenmedya/Desktop/MobilKans%C4%B1zl%C4%B1k/MobilKansizlik1/MobilKansizlik/New%20Group/TestViewController/TestViewController.swift"
+                  timestampString = "567551571.993391"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "248"
+                  endingLineNumber = "248"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MobilKansizlik/Foundation/UITextFieldExtension.swift"
+            timestampString = "567551663.156456"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "testFieldKeyboardValide(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

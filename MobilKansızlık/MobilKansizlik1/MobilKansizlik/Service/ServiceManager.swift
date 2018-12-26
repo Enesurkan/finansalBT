@@ -62,17 +62,11 @@ class ServiceManager: NSObject {
         ]
         
         let parameters : [String : String] = [
-            "NE" : userTestModel.NE,
             "RBC" : userTestModel.RBC,
             "HGB" : userTestModel.HGB,
             "HCT" : userTestModel.HCT,
-            "MCHC" : userTestModel.MCHC,
             "MCH" : userTestModel.MCH,
-            "MCV" : userTestModel.MCV,
-            "LYM" : userTestModel.LYM,
-            "RDW" : userTestModel.RDW,
-            "PLT" : userTestModel.PLT,
-            "MPV" : userTestModel.MPV
+            "MCV" : userTestModel.MCV
             
         ]
         DataSource(.post, url: "KansizlikTest" , parameters: parameters, headers: headers, responseType: TestResultModel.self) { (responseData , error) -> Void in

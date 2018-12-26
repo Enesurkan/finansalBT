@@ -28,31 +28,16 @@ class TestFieldCell: UITableViewCell {
 extension TestFieldCell {
     
     func updateCell(indexPath : NSIndexPath){
-        
-        if(indexPath.row == TestTextFieldType.TestTextFieldTypeWBC.rawValue){
-            textField.placeholder = "WBC Değerini Giriniz(Örn: 12.5)"
-        } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeNE.rawValue){
-            textField.placeholder = "NE Değerini Giriniz(Örn: 12.5)"
-        } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeRBC.rawValue){
-            textField.placeholder = "RBC Değerini Giriniz(Örn: 12.5)"
-        } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeHGB.rawValue){
+        if(indexPath.row == TestTextFieldType.TestTextFieldTypeHGB.rawValue){
             textField.placeholder = "HGB Değerini Giriniz(Örn: 12.5)"
         } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeHCT.rawValue){
             textField.placeholder = "HCT Değerini Giriniz(Örn: 12.5)"
-        } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeMCHC.rawValue){
-            textField.placeholder = "MCHC Değerini Giriniz(Örn: 12.5)"
         } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeMCH.rawValue){
             textField.placeholder = "MCH Değerini Giriniz(Örn: 12.5)"
         } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeMCV.rawValue){
             textField.placeholder = "MCV Değerini Giriniz(Örn: 12.5)"
-        } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeLYM.rawValue){
-            textField.placeholder = "LYM Değerini Giriniz(Örn: 12.5)"
-        } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeRDW.rawValue){
-            textField.placeholder = "RDW Değerini Giriniz(Örn: 12.5)"
-        } else if(indexPath.row == TestTextFieldType.TestTextFieldTypePLT.rawValue){
-            textField.placeholder = "PLT Değerini Giriniz(Örn: 12.5)"
-        } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeMPV.rawValue){
-            textField.placeholder = "MPV Değerini Giriniz(Örn: 12.5)"
+        } else if(indexPath.row == TestTextFieldType.TestTextFieldTypeRBC.rawValue){
+            textField.placeholder = "RBC Değerini Giriniz(Örn: 12.5)"
         }
         textField.tag = indexPath.row
     }
@@ -73,5 +58,6 @@ extension TestFieldCell {
 
 enum TestTextFieldType : Int{
     
-    case TestTextFieldTypeWBC = 0, TestTextFieldTypeNE, TestTextFieldTypeRBC, TestTextFieldTypeHGB,TestTextFieldTypeHCT, TestTextFieldTypeMCHC, TestTextFieldTypeMCH,TestTextFieldTypeMCV, TestTextFieldTypeLYM, TestTextFieldTypeRDW,TestTextFieldTypePLT, TestTextFieldTypeMPV
+    case TestTextFieldTypeHGB = 0, TestTextFieldTypeHCT, TestTextFieldTypeMCH, TestTextFieldTypeMCV,TestTextFieldTypeRBC
 }
+

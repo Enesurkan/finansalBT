@@ -9,17 +9,10 @@
 import UIKit
 
 struct UserTest {
-    var WBC: String = ""
-    var NE: String = ""
-    var RBC: String = ""
     var HGB: String = ""
     var HCT: String = ""
-    var MCHC: String = ""
     var MCH: String = ""
     var MCV: String = ""
-    var LYM: String = ""
-    var RDW: String = ""
-    var PLT: String = ""
-    var MPV: String = ""
+    var RBC: String = ""
 }
 

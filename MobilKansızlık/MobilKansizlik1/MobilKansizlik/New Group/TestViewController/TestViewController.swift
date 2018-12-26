@@ -194,7 +194,7 @@ extension TestViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 12{
+        if indexPath.row == 5{
             let cellButton = tableView.dequeueCell(withClassAndIdentifier: ButtonCell.self, for: indexPath)
             cellButton.button.addTarget(self, action: #selector(testResult), for: .touchUpInside)
             return cellButton
@@ -215,7 +215,7 @@ extension TestViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 13
+        return 6
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -227,7 +227,7 @@ extension TestViewController : UITableViewDataSource {
 extension TestViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 12 {
+        if indexPath.row == 5 {
             return 80
         }else{
             return 60
@@ -246,30 +246,6 @@ extension TestViewController : UITextFieldDelegate{
     @objc func textFieldDidChange(_ textField: UITextField) {
         
         switch textField.tag {
-        case TestTextField.WBC.rawValue:
-            if(textField.testFieldKeyboardValide(textField)){
-                model.WBC = textField.text!
-            }else{
-                textField.text = model.WBC
-            }
-            textField.validTest(textField, type: .testValue)
-            break
-        case TestTextField.NE.rawValue:
-            if(textField.testFieldKeyboardValide(textField)){
-                model.NE = textField.text!
-            }else{
-                textField.text = model.NE
-            }
-            textField.validTest(textField, type: .testValue)
-            break
-        case TestTextField.RBC.rawValue:
-            if(textField.testFieldKeyboardValide(textField)){
-                model.RBC = textField.text!
-            }else{
-                textField.text = model.RBC
-            }
-            textField.validTest(textField, type: .testValue)
-            break
         case TestTextField.HGB.rawValue:
             if(textField.testFieldKeyboardValide(textField)){
                 model.HGB = textField.text!
@@ -283,14 +259,6 @@ extension TestViewController : UITextFieldDelegate{
                 model.HCT = textField.text!
             }else{
                 textField.text = model.HCT
-            }
-            textField.validTest(textField, type: .testValue)
-            break
-        case TestTextField.MCHC.rawValue:
-            if(textField.testFieldKeyboardValide(textField)){
-                model.MCHC = textField.text!
-            }else{
-                textField.text = model.MCHC
             }
             textField.validTest(textField, type: .testValue)
             break
@@ -310,35 +278,11 @@ extension TestViewController : UITextFieldDelegate{
             }
             textField.validTest(textField, type: .testValue)
             break
-        case TestTextField.LYM.rawValue:
+        case TestTextField.RBC.rawValue:
             if(textField.testFieldKeyboardValide(textField)){
-                model.LYM = textField.text!
+                model.RBC = textField.text!
             }else{
-                textField.text = model.LYM
-            }
-            textField.validTest(textField, type: .testValue)
-            break
-        case TestTextField.RDW.rawValue:
-            if(textField.testFieldKeyboardValide(textField)){
-                model.RDW = textField.text!
-            }else{
-                textField.text = model.RDW
-            }
-            textField.validTest(textField, type: .testValue)
-            break
-        case TestTextField.PLT.rawValue:
-            if(textField.testFieldKeyboardValide(textField)){
-                model.PLT = textField.text!
-            }else{
-                textField.text = model.PLT
-            }
-            textField.validTest(textField, type: .testValue)
-            break
-        case TestTextField.MPV.rawValue:
-            if(textField.testFieldKeyboardValide(textField)){
-                model.MPV = textField.text!
-            }else{
-                textField.text = model.MPV
+                textField.text = model.RBC
             }
             textField.validTest(textField, type: .testValue)
             break
@@ -350,77 +294,33 @@ extension TestViewController : UITextFieldDelegate{
     func isValide() -> Bool{
         
         var isValieValue = true
-        if(model.WBC.isEmpty){
+        if(model.HGB.isEmpty){
             isValieValue = false
             if let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TestFieldCell{
                 cell.textField.validTest(cell.textField, type: .testValue)
             }
         }
-        if(model.NE.isEmpty){
-            isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TestFieldCell{
-                cell.textField.validTest(cell.textField, type: .testValue)
-                
-            }
-        }
-        if(model.RBC.isEmpty){
-            isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? TestFieldCell{
-                cell.textField.validTest(cell.textField, type: .testValue)
-                
-            }
-        }
-        if(model.HGB.isEmpty){
-            isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? TestFieldCell{
-                cell.textField.validTest(cell.textField, type: .testValue)
-            }
-        }
         if(model.HCT.isEmpty){
             isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 4, section: 0)) as? TestFieldCell{
-                cell.textField.validTest(cell.textField, type: .testValue)
-            }
-        }
-        if(model.MCHC.isEmpty){
-            isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 5, section: 0)) as? TestFieldCell{
+            if let cell = self.tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? TestFieldCell{
                 cell.textField.validTest(cell.textField, type: .testValue)
             }
         }
         if(model.MCH.isEmpty){
             isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 6, section: 0)) as? TestFieldCell{
+            if let cell = self.tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? TestFieldCell{
                 cell.textField.validTest(cell.textField, type: .testValue)
             }
         }
         if(model.MCV.isEmpty){
             isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 7, section: 0)) as? TestFieldCell{
+            if let cell = self.tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? TestFieldCell{
                 cell.textField.validTest(cell.textField, type: .testValue)
             }
         }
-        if(model.LYM.isEmpty){
+        if(model.RBC.isEmpty){
             isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 8, section: 0)) as? TestFieldCell{
-                cell.textField.validTest(cell.textField, type: .testValue)
-            }
-        }
-        if(model.RDW.isEmpty){
-            isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 9, section: 0)) as? TestFieldCell{
-                cell.textField.validTest(cell.textField, type: .testValue)
-            }
-        }
-        if(model.PLT.isEmpty){
-            isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 10, section: 0)) as? TestFieldCell{
-                cell.textField.validTest(cell.textField, type: .testValue)
-            }
-        }
-        if(model.MPV.isEmpty){
-            isValieValue = false
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 11, section: 0)) as? TestFieldCell{
+            if let cell = self.tableView.cellForRow(at: IndexPath(row: 4, section: 0)) as? TestFieldCell{
                 cell.textField.validTest(cell.textField, type: .testValue)
             }
         }
